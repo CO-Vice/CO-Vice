@@ -6,9 +6,13 @@
 [![E-Mail](https://img.shields.io/badge/E--Mail-o.weiss%40guidedpathadvisors.com-D14836?logo=gmail&logoColor=white)](mailto:o.weiss@guidedpathadvisors.com)
 [![Jack Rabbit](https://img.shields.io/badge/jack--rabbit.ai-Culture%20Intelligence-111827)](https://jack-rabbit.ai)
 
-15 Jahre Go-to-Market, Growth und P&L-Verantwortung (Criteo, Sizmek, Adform, Microsoft). Dann der Seitenwechsel in den Maschinenraum: Seit 18 Monaten baue und betreibe ich als Co-Founder zwei mandantenfähige, agentische KI-Plattformen – nicht als der Gründer, der Wünsche in Jira ablädt, sondern als der, der nachts das Repo offen hat.
+🇩🇪 **[Deutsch](#-deutsch)** · 🇬🇧 **[English](#-english)**
 
 ---
+
+# 🇩🇪 Deutsch
+
+15 Jahre Go-to-Market, Growth und P&L-Verantwortung (Criteo, Sizmek, Adform, Microsoft). Dann der Seitenwechsel in den Maschinenraum: Seit 18 Monaten baue und betreibe ich als Co-Founder zwei mandantenfähige, agentische KI-Plattformen – nicht als der Gründer, der Wünsche in Jira ablädt, sondern als der, der nachts das Repo offen hat.
 
 ## Über mich
 
@@ -36,8 +40,6 @@ Ich arbeite an der Stelle, an der KI-Piloten scheitern: zwischen dem Fachbereich
 | **100 %** | der Modellaufrufe mit Rate-Limit und Metering |
 | **53 % → gekappt** | Anteil der Agenten-Sessions über 200k Kontext – gemessen, dann per Policy begrenzt |
 
----
-
 ## Aktuelle Projekte
 
 Die Plattformen sind proprietär und nicht öffentlich. Hier das Schaufenster – was ich baue, nicht wie es intern aussieht.
@@ -54,11 +56,85 @@ Lead-Intelligence-Service: Verticals- und ICP-Modelle, Anreicherung über extern
 ### Nebenbei
 - **[handball-heimspiele](https://github.com/CO-Vice/handball-heimspiele)** – kleines privates Tool, das Heimspiele hochklassiger Handball-Teams im Umkreis findet. Spielerei, aber öffentlich.
 
+## Zusammenarbeit
+
+Wenn ihr genau zwischen „der Pilot läuft prima" und „die IT verweigert das Go-Live" feststeckt, begleite ich euch in drei Formaten:
+
+| Format | Für wen | Ergebnis |
+|---|---|---|
+| **Agent Production Readiness Audit** · 10 Tage, Festpreis | Mittelstand und Scale-ups, deren Agenten-Pilot seit Wochen nicht produktiv geht | Eval-Set für die 20 kritischsten Fälle, Governance-Karte für das Management, Kostenprofil aus euren Logs, ein umgesetzter Quick-Win im Code, 90-Tage-Plan |
+| **AI-native Engineering Enablement** · 3 Wochen, Festpreis | Dev-Teams (5–40), die Coding-Agenten einführen oder schon nutzen | `AGENTS.md`-Betriebsvertrag, deterministische CI-Gates, Cross-Model-Verifikation, Kosten-Baseline, Lern-Register – laufend im eigenen Repo |
+| **Fractional Head of AI-GTM** · 2 Tage/Woche | Seed- und Series-A-Startups mit B2B-KI-Produkt und ohne besetzte GTM-Rolle | Positionierung, Pricing bei variablen Token-Kosten, Pilot-to-Paid-Playbook, CISO-feste Sales-Argumente |
+
+Details und Konditionen: [LinkedIn](https://www.linkedin.com/in/oliweiss) oder direkt per [E-Mail](mailto:o.weiss@guidedpathadvisors.com).
+
+Der Tech Stack steht [weiter unten](#tech-stack).
+
+---
+
+# 🇬🇧 English
+
+15 years of go-to-market, growth and P&L responsibility (Criteo, Sizmek, Adform, Microsoft). Then I switched sides into the engine room: for the past 18 months I have been building and operating two multi-tenant, agentic AI platforms as a co-founder – not the founder who drops wishes into Jira, but the one who has the repo open at night.
+
+## About me
+
+I work at the exact point where AI pilots fail: between the business unit that wants results and IT, Legal and the CISO who ask about tenant isolation, cost and liability. So my core is less "prompt engineering" than **operability**:
+
+- **Agentic systems in production** – LLM orchestration with a model registry, fallbacks and versioned prompts; every model call passes through rate limiting and metering with a per-use-case budget check.
+- **Multi-tenant backends** – Postgres with tenant isolation (decided as an ADR and secured with real DB integration tests), billing, a job control plane for self-steering data ingestion, observability with Sentry/Pino.
+- **Governance for agentic development** – an operating contract (`AGENTS.md`) that every coding agent reads before touching code or data; deterministic CI gates and hooks; cross-model verification of every material commit by a second model provider, without mocks; a learnings register whose repeated entries become rules or tests.
+- **Token economics as code** – context and effort policies derived from measured sessions, not gut feeling.
+
+### Three lessons from 18 months of platform building
+
+1. **The agent is not the product. The rulebook is.**
+2. **A green test proves nothing – until it has been broken once.**
+3. **What an agent costs decides the product. Not the inference infrastructure.**
+
+### Numbers from the repositories (as of September 2026)
+
+| | |
+|---|---|
+| **3,466** | commits in 12 months |
+| **2,322** | test files, including real DB integration tests |
+| **23** | Architecture Decision Records in the codebase |
+| **8** | model providers verifying each other |
+| **100 %** | of model calls with rate limiting and metering |
+| **53 % → capped** | share of agent sessions above 200k context – measured, then limited by policy |
+
+## Current projects
+
+The platforms are proprietary and not public. This is the showcase – what I build, not how it looks inside.
+
+### Jack Rabbit Culture Decoder · Production
+Culture intelligence platform that measures how culturally relevant a brand really is – for people and for AI-generated answers. At its core: a Next.js/TypeScript application on Neon Postgres with tenant isolation, an LLM pipeline via the Vercel AI SDK with metering and budget limits, Inngest jobs for data ingestion, Stripe billing, Sentry/Pino observability, Vitest integration tests against real databases and Playwright E2E.
+
+### Guided Path Navigator (GPN) · Production
+Agentic B2B platform for market analysis and sales intelligence. Monorepo with a Next.js frontend, a Node API and a Python backend (FastAPI, LangGraph/LangChain) for agent orchestration; multiple LLM providers with fallbacks, pgvector for semantic search, Docker Compose deployment including local inference (Ollama/vLLM).
+
+### Jack Rabbit Leads · Production
+Lead intelligence service: vertical and ICP models, enrichment from external data sources, queue-based processing (BullMQ) and partner reports. Express/TypeScript backend with Drizzle on Postgres, React client, Anthropic SDK, BigQuery.
+
+### On the side
+- **[handball-heimspiele](https://github.com/CO-Vice/handball-heimspiele)** – small private tool that finds home games of top-tier handball teams nearby. A toy, but public.
+
+## Working together
+
+If you are stuck exactly between "the pilot works fine" and "IT refuses the go-live", I support you in three formats:
+
+| Format | For whom | Outcome |
+|---|---|---|
+| **Agent Production Readiness Audit** · 10 days, fixed price | Mid-market companies and scale-ups whose agent pilot has not reached production for weeks | Eval set for the 20 most critical cases, governance map for management, cost profile from your logs, one implemented quick win in code, 90-day plan |
+| **AI-native Engineering Enablement** · 3 weeks, fixed price | Dev teams (5–40) introducing or already using coding agents | `AGENTS.md` operating contract, deterministic CI gates, cross-model verification, cost baseline, learnings register – running in your own repo |
+| **Fractional Head of AI-GTM** · 2 days/week | Seed and Series A startups with a B2B AI product and no GTM role in place | Positioning, pricing with variable token costs, pilot-to-paid playbook, CISO-proof sales arguments |
+
+Details and terms: [LinkedIn](https://www.linkedin.com/in/oliweiss) or directly by [e-mail](mailto:o.weiss@guidedpathadvisors.com).
+
 ---
 
 ## Tech Stack
 
-**Sprachen & Runtime**
+**Languages & Runtime**
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
@@ -73,7 +149,7 @@ Lead-Intelligence-Service: Verticals- und ICP-Modelle, Anreicherung über extern
 ![Radix UI](https://img.shields.io/badge/Radix_UI-161618?logo=radixui&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
 
-**Backend & Daten**
+**Backend & Data**
 
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white)
 ![Neon](https://img.shields.io/badge/Neon-00E599?logo=neon&logoColor=black)
@@ -85,7 +161,7 @@ Lead-Intelligence-Service: Verticals- und ICP-Modelle, Anreicherung über extern
 ![Zod](https://img.shields.io/badge/Zod-3E67B1?logo=zod&logoColor=white)
 ![BigQuery](https://img.shields.io/badge/BigQuery-669DF6?logo=googlebigquery&logoColor=white)
 
-**KI & Agenten**
+**AI & Agents**
 
 ![Anthropic](https://img.shields.io/badge/Anthropic_Claude-191919?logo=anthropic&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?logo=openai&logoColor=white)
@@ -120,18 +196,4 @@ Lead-Intelligence-Service: Verticals- und ICP-Modelle, Anreicherung über extern
 
 ---
 
-## Zusammenarbeit
-
-Wenn ihr genau zwischen „der Pilot läuft prima" und „die IT verweigert das Go-Live" feststeckt, begleite ich euch in drei Formaten:
-
-| Format | Für wen | Ergebnis |
-|---|---|---|
-| **Agent Production Readiness Audit** · 10 Tage, Festpreis | Mittelstand und Scale-ups, deren Agenten-Pilot seit Wochen nicht produktiv geht | Eval-Set für die 20 kritischsten Fälle, Governance-Karte für das Management, Kostenprofil aus euren Logs, ein umgesetzter Quick-Win im Code, 90-Tage-Plan |
-| **AI-native Engineering Enablement** · 3 Wochen, Festpreis | Dev-Teams (5–40), die Coding-Agenten einführen oder schon nutzen | `AGENTS.md`-Betriebsvertrag, deterministische CI-Gates, Cross-Model-Verifikation, Kosten-Baseline, Lern-Register – laufend im eigenen Repo |
-| **Fractional Head of AI-GTM** · 2 Tage/Woche | Seed- und Series-A-Startups mit B2B-KI-Produkt und ohne besetzte GTM-Rolle | Positionierung, Pricing bei variablen Token-Kosten, Pilot-to-Paid-Playbook, CISO-feste Sales-Argumente |
-
-Details und Konditionen: [LinkedIn](https://www.linkedin.com/in/oliweiss) oder direkt per [E-Mail](mailto:o.weiss@guidedpathadvisors.com).
-
----
-
-<sub>Alle Kennzahlen stammen aus den Repositories der beiden Plattformen, Stand September 2026. Die Plattform-Repos sind proprietär; hier gibt es keinen Quellcode aus ihnen.</sub>
+<sub>DE: Alle Kennzahlen stammen aus den Repositories der beiden Plattformen, Stand September 2026. Die Plattform-Repos sind proprietär; hier gibt es keinen Quellcode aus ihnen.<br>EN: All figures come from the repositories of the two platforms, as of September 2026. The platform repos are proprietary; no source code from them is published here.</sub>
