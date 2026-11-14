@@ -74,7 +74,7 @@ Der Tech Stack steht [weiter unten](#tech-stack).
 
 # 🇬🇧 English
 
-15 years of go-to-market, growth and P&L responsibility (Criteo, Sizmek, Adform, Microsoft). Then I switched sides into the engine room: for the past 18 months I have been building and operating two multi-tenant, agentic AI platforms as a co-founder – not the founder who drops wishes into Jira, but the one who has the repo open at night.
+25 years of go-to-market, growth and P&L responsibility (Criteo, Sizmek, Adform, Microsoft). Then I switched sides into the engine room: for the past 18 months I have been building and operating two multi-tenant, agentic AI platforms as a co-founder – not the founder who drops wishes into Jira, but the one who has the repo open at night.
 
 ## About me
 
