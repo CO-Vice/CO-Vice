@@ -12,7 +12,7 @@
 
 # 🇩🇪 Deutsch
 
-15 Jahre Go-to-Market, Growth und P&L-Verantwortung (Criteo, Sizmek, Adform, Microsoft). Dann der Seitenwechsel in den Maschinenraum: Seit 18 Monaten baue und betreibe ich als Co-Founder zwei mandantenfähige, agentische KI-Plattformen – nicht als der Gründer, der Wünsche in Jira ablädt, sondern als der, der nachts das Repo offen hat.
+25 Jahre Go-to-Market, Growth und P&L-Verantwortung (Criteo, Sizmek, Adform, Microsoft). Dann der Seitenwechsel in den Maschinenraum: Seit 18 Monaten baue und betreibe ich als Co-Founder zwei mandantenfähige, agentische KI-Plattformen – nicht als der Gründer, der Wünsche in Jira ablädt, sondern als der, der nachts das Repo offen hat.
 
 ## Über mich
 
